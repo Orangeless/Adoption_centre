@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.AddAnimalController"
+      spacing="20" alignment="TOP_CENTER"
+      prefWidth="400" prefHeight="450"
+      stylesheets="@style.css"
+      styleClass="root">
+
+  <HBox alignment="CENTER">
+  <ImageView fx:id="banner"
+           fitWidth="400"
+           preserveRatio="true"/>
+
+
+
+  </HBox>
+  <Label text="Add Animal"
+         styleClass="title"/>
+
+  <GridPane hgap="10" vgap="10">
+    <columnConstraints>
+      <ColumnConstraints halignment="RIGHT" minWidth="90"/>
+      <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+
+    <Label text="Type:"            GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <ChoiceBox fx:id="typeChoice"  GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Name:"            GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="nameField"   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Age:"             GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="ageField"    GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+  </GridPane>
+
+  <HBox spacing="30" alignment="CENTER" styleClass="footer">
+    <Button text="Add"   onAction="#onAdd"   prefWidth="100"/>
+    <Button text="Close" onAction="#onClose" prefWidth="100"/>
+  </HBox>
+</VBox>

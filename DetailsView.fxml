@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>   
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.DetailsController"
+      fx:id="root"
+      spacing="20"
+      alignment="TOP_CENTER"
+      prefWidth="400"
+      prefHeight="450"
+      stylesheets="@style.css"
+      styleClass="root">
+
+  
+  <HBox alignment="CENTER">
+    <ImageView fx:id="banner"
+    fitWidth="400"
+               preserveRatio="true"
+               styleClass="banner">
+      <image>
+        
+        <Image url="@image/cat_banner.jpg"/>
+      </image>
+    </ImageView>
+  </HBox>
+
+  
+  <Label fx:id="nameLabel"
+         styleClass="title"/>
+
+  
+  <ListView fx:id="adoptedList"
+            VBox.vgrow="ALWAYS"/>
+
+  
+  <HBox spacing="30"
+        alignment="CENTER"
+        styleClass="footer">
+    <Button text="Close"
+            onAction="#onClose"
+            prefWidth="100"/>
+  </HBox>
+
+</VBox>

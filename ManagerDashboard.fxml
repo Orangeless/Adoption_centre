@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ManagerDashboardController"
+      spacing="10" alignment="TOP_CENTER"
+      prefWidth="400" prefHeight="600"
+      stylesheets="@style.css"
+      styleClass="root">
+
+  
+  <ImageView fx:id="banner"
+             fitWidth="400" preserveRatio="true"
+             styleClass="banner"/>
+  <Label text="Manager Dashboard"
+         styleClass="title"/>
+
+  
+  <TabPane fx:id="filterTabs" prefWidth="780"/>
+
+  
+  <TableView fx:id="animalTable" VBox.vgrow="ALWAYS">
+    <columns>
+      <TableColumn fx:id="nameCol"   text="Name"/>
+      <TableColumn fx:id="typeCol"   text="Type"/>
+      <TableColumn fx:id="ageCol"    text="Age"/>
+      <TableColumn fx:id="statusCol" text="Status"/>
+    </columns>
+  </TableView>
+
+  
+  <HBox spacing="20" alignment="CENTER" styleClass="footer">
+    <Button text="User List" onAction="#onUserList" prefWidth="100"/>
+    <Button text="Add"       onAction="#onAdd"      prefWidth="100"/>
+    <Button text="Remove"    onAction="#onRemove"   prefWidth="100"/>
+    <Button text="Close"     onAction="#onClose"    prefWidth="100"/>
+  </HBox>
+</VBox>
