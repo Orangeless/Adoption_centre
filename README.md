@@ -108,7 +108,7 @@ The app seeds the following data on startup:
 
 1. Clone or download the project
 2. Set up JavaFX on your classpath/module path (if not bundled)
-3. Compile all `.java` files
+3. Compile all `.java` files under `src/`
 4. Run `Prog2AdoptionCentreApp`
 
 In an IDE (IntelliJ / Eclipse), add the JavaFX SDK as a library, configure VM options:
